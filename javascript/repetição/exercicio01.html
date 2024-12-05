@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 01 de repetição</title>
+    <style>
+        body{
+            background-color: rgb(0, 156, 156);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1{
+            text-align: center;
+            color: white;
+            text-shadow: 2px 2px 2px black;
+        }
+
+        main{
+            margin: auto;
+            padding: 30px;
+            width: 500px;
+            height: 250px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.616);
+            font-weight: bold;
+        }
+
+        #contar{
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>VAMOS CONTAR</h1>
+    <main>
+        <section>
+                <p>Início:
+                    <label for="n1"></label>
+                    <input type="number" name="n1" id="n1" min="1">
+                </p>
+                <p>Fim:
+                    <label for="n2"></label>
+                    <input type="number" name="n2" id="n2" min="1">
+                </p>
+                <p>Passo:
+                    <label for="passo"></label>
+                    <input type="number" name="pa" id="passo" min="1">
+                </p>
+
+                <input type="submit" value="Contar" id="contar" onclick="contar()">
+
+            <div id="resposta">Preparando contagem</div>
+        </section>
+    </main>
+
+    <script>
+        function contar(){
+            inicio = document.getElementById('n1')
+            fim = document.getElementById('n2')
+            passo = document.getElementById('passo')
+
+        if (inicio.value.length == 0 || fim.value.length == 0 || passo.value.length == 0) {
+            alert('ERRO, faltam dados.')
+        } else{
+            resposta.innerHTML = "Contando " 
+            i = Number(inicio.value)
+            f = Number(fim.value)
+            p = Number(passo.value)
+
+            for(c = i ;c <= f ; c += p){
+                resposta.innerHTML += `${c} \u{1F603}`
+            }
+        }
+        }
+    </script>
+</body>
+</html>
