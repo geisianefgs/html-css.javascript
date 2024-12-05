@@ -51,7 +51,7 @@
 
                 <input type="button" value="Contar" id="contar" onclick="contar()">
 
-            <div id="resposta">Preparando contagem</div>
+            <div id="resposta">Preparando contagem...</div>
         </section>
     </main>
 
@@ -60,25 +60,25 @@
             inicio = document.getElementById('n1')
             fim = document.getElementById('n2')
             passo = document.getElementById('passo')
-            resposta = document.getElementById('resposta')
-
-            resposta.innerHTML = 'Contando '
             
+
             if (inicio.value.length == 0 || fim.value.length == 0 || passo.value.length == 0){
-                resposta.innerHTML = 'Impossivel contar! Faltam dados.'
+                alert('Impossivel contar! Faltam dados.')
+            } else {
+
+                resposta.innerHTML = 'Contando '
 
                 inicio = Number(inicio.value)
                 fim = Number(fim.value)
                 passo = Number(passo.value)
-                resposta = Number(resposta.value)
 
-                if (inicio < fim){
-                    for (c = inicio; c <= fim; c += passo){
+                if (inicio <= fim){
+                    for(c = inicio; c <= fim; c += passo){
                         resposta.innerHTML += `${c}..`}
-                } else {
-                    for (c = inicio; c >= fim; c -= passo){
+                } else{
+                    for(c = inicio; c >= fim; c -= passo){
                         resposta.innerHTML += `${c}..`}
-                }
+                } 
             }
         }
     </script>
