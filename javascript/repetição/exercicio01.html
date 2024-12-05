@@ -62,20 +62,22 @@
             passo = document.getElementById('passo')
             resposta = document.getElementById('resposta')
 
+            resposta.innerHTML = 'Contando '
             
-
             if (inicio.value.length == 0 || fim.value.length == 0 || passo.value.length == 0){
-                resposta.innerHTML = 'Impossivel contar!'
-            } else {
+                resposta.innerHTML = 'Impossivel contar! Faltam dados.'
+
                 inicio = Number(inicio.value)
-                fim = Number(inicio.value)
-                passo = Number(inicio.value)
+                fim = Number(fim.value)
+                passo = Number(passo.value)
+                resposta = Number(resposta.value)
 
                 if (inicio < fim){
                     for (c = inicio; c <= fim; c += passo){
-                        resposta.innerHTML = `${c}..`}
+                        resposta.innerHTML += `${c}..`}
                 } else {
-                    resposta.innerHTML = 'OK'
+                    for (c = inicio; c >= fim; c -= passo){
+                        resposta.innerHTML += `${c}..`}
                 }
             }
         }
