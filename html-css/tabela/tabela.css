@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+div{
+    overflow: auto;
+}
+
+caption{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #888888;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+table{
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+td, tr{
+    width: 150px;
+    padding: 2px;
+    border: 2px solid #000000;
+}
+
+thead, tfoot{
+    background-color: #2e2e2e;
+    color: white;
+    border: 2px solid black;
+}
+
+.dados{
+    text-align: right;
+    width: 130px;
+}
+
+thead > tr > th{
+    border: 2px solid black;
+}
+
+thead > tr > th > strong{
+    background-color: #2e2e2e;
+    position: stick;
+    top: 0px;
+}

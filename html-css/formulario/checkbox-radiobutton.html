@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="cadastro.php">
+        <fieldset>
+            <legend>checkbox</legend>
+            <label for="basquete">
+            <input type="checkbox" name="basquete" id="basquete"> Basquete <br>
+
+            <label for="volei">
+            <input type="checkbox" name="volei" id="volei"> Vôlei <br>
+
+            <label for="tenis"> 
+            <input type="checkbox" name="tenis" id="tenis"> Tênis <br>
+            
+            <label for="futebol">
+            <input type="checkbox" name="futebol" id="futebol"> Futebol
+        </fieldset>
+        <input type="submit" value="Enviar">
+
+
+        <!--Para a marcação do RADIO devem ter o mesmo "name" para que todos radios não sejam marcados-->
+        <fieldset>
+            <legend>Radio Button</legend>
+
+            <label for="feminino"></label>
+            <input type="radio" name="sexo" id="feminino">
+
+            <label for="masculino"></label>
+            <input type="radio" name="sexo" id="masculino">
+        </fieldset>
+    </form>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tabela.css">
+    <title>Tabela</title>
+</head>
+
+<!--
+    Tudo que for um TÍTULO é "th"; 
+    Tudo que for um DADO é "td";
+    Para sinalizar que as células abaixo fazem parte do título "scope='col'";
+    Para sinalizar que as celulas ao lado fazem parte do título "scope='row'";
+    Para mesclar colunas " colspan="quantidade de colunas" ";
+    Para mesclar linhas " rowspan="quantidade de colunas" ";
+-->
+
+<body>
+    <div>
+        <table>
+            <caption>TÍTULO DA TABELA</caption>
+                <thead>
+                    <tr>
+                        <th scope="col"> <strong>PAÍS</strong> </th>
+                        <th scope="col"> <strong>POPULAÇÃO</strong> </th>
+                    </tr>
+                </thead>
+                    <tbody>
+                        <tr>
+                            <td>Brasil</th>
+                            <td class="dados">800.000.00</td>
+                        </tr>
+        
+                        <tr>
+                            <td>Estados Unidos</td>
+                            <td class="dados">100.000.000</td>
+                        </tr>
+                        <tr>
+                            <td>Canadá</td>
+                            <td class="dados">700.564.659</td>
+                        </tr>
+                        <tr>
+                            <td>México</td>
+                            <td class="dados">594.666.254</td>
+                        </tr>
+                    </tbody>
+                <tfoot>
+                    <tr>
+                        <th scope="row"><strong>TOTAL DE HABITANTES</strong></th>
+                        <td class="dados"><strong>9.456.482.065.65</strong></td>
+                    </tr>
+                </tfoot>
+            </table>
+    </div>
+
+            <table>
+                <tr>
+                    <td>A</td>
+                    <td style="text-align: center;" colspan="2">B</td>
+                </tr>
+
+                <tr>
+                    <td>C</td>
+                    <td>D</td>
+                    <td style="text-align: center;" rowspan="2">E</td>
+                </tr>
+
+                <tr>
+                    <td>G</td>
+                    <td>H</td>
+                </tr>
+            </table>    
+</body>
+</html>

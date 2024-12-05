@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuário e Senha</title>
+    <style>
+        div{
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Usuário e Senha</h1>
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <fieldset>
+            <legend>Usuário e senha</legend>
+            <div>
+                <label for="usuario">
+                Usuário: <input type="text" name="usuario" id="usuario" required minlength="5" placeholder="Nome do usuário" autocomplete="username">
+                </label>
+            </div>
+            <div>
+                <label for="senha">
+                Senha: <input type="password" name="senha" id="senha" required minlength="8" placeholder="Senha do usuário" autocomplete="current-password">
+                </label>
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>

@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+table{
+    border-collapse: collapse;
+}
+
+caption{
+    font-size: 2em;
+    font-family: arial;
+    font-weight: bold;
+}
+
+thead{
+    font-weight: bold;
+    background-color: #7a7a7a;
+    color: white;
+}
+
+tr, th, td{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+    border: 3px solid black;
+    padding: 2px;
+    width: 250px;
+    height: 50px;
+}
+
+.media, .total{
+    background-color: rgb(122, 122, 122);
+    color: white;
+}

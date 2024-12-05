@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Output</title>
+</head>
+<body>
+    <h1>Mostrar qual o valor que a bolinha esta andando</h1>
+    <form action="cadatro.php" method="get">
+        <label for="numero"></label>
+        <input type="range" name="numero" id="numero" min="0" max="5" value="0" oninput="valor.innerHTML = Number(numero.value)">
+        <output id="valor">0</output>
+
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>

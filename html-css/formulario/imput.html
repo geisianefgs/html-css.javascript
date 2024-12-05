@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imput</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            color: white;
+            background-color: lightblue;
+        }
+
+        main{
+            padding: 20px 10px 10px 10px;
+            width: 800px;
+            margin: auto;
+            background-color: darkslategrey;
+            margin-top: -25px;
+            margin-bottom: 100vh;
+        }
+
+        h1{
+            font-size: 2em;
+            text-shadow: 2px 2px 2px black;
+        }
+
+        .caixa{
+            width: 100px;
+            height: 20px;
+            border: 2px solid black;
+            font-size: 1em;
+        }
+
+        #botaoresultado{
+            background-color: #000000;
+            color: white;
+        }
+
+        #resultado{
+            margin-top: 10px;
+            text-shadow: 2px 2px black;
+            margin-bottom: 20px;
+        }
+
+        p{
+            color: darkslategrey;
+        }
+
+    </style>
+
+</head>
+<body>
+    <main>
+        <h1>SOMANDO VALORES</h1>
+        <div id="caixas">
+            <input class="caixa" type="number" name="txtn1" id="txtn1"> +
+            <input class="caixa" type="number" name="txtn2" id="txtn2">
+            <input id="botaoresultado" type="button" value="somar" onclick="somar()">
+        </div>
+        <div id="resultado">Resultado</div>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium ab dolorem iste est saepe aliquid ex beatae, voluptate minima cum laboriosam ut facere incidunt sed quam in, at sunt pariatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Et qu
+        </p>
+    </main>
+
+    <script>
+        function somar(){
+            var caixa1 = document.getElementById('txtn1')
+            var caixa2 = document.getElementById('txtn2')
+            var resultado = document.getElementById('resultado')
+            var n1 = Number(caixa1.value)
+            var n2 = Number(caixa2.value)
+            var soma = n1 + n2
+            resultado.innerHTML = (`O resultado foi <strong>${soma}</strong>`)
+        }
+    </script>
+</body>
+</html>

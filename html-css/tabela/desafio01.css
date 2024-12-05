@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+table{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+td, tr{
+    font-size: 1.5em;
+    border: 2px solid black;
+    padding: 2px;
+    width: 100px;
+    text-align: center;
+}
