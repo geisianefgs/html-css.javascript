@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+body{
+    background-color: aquamarine;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    color: white;
+}
+
+section{
+    background-color: aliceblue;
+    width: 500px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px #000000dc;
+    padding: 20px;
+    color: black;
+}
+
+#msg{
+    padding-bottom: 10px;
+}
+
+img{
+    width: 300px;;
+    height: 300px;
+    border-radius: 300px;
+}

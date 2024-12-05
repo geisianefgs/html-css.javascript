@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function DOM</title>
+    <style>
+        #area{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.5em;
+            color: white;
+            background-color: green;
+            width: 150px;
+            height: 150px;
+            text-align: center;
+            line-height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div id="area">
+        clique aqui...
+    </div>
+
+    <script>
+
+        var area = document.getElementById("area") //colocando a variável fora de "function", pode-se usar a mesma variável para vários tipos de funções com o objeto.
+        
+            area.addEventListener('click', clicar)
+            area.addEventListener('mouseenter', entrar)
+            area.addEventListener('mouseout', sair)
+            //Essas três linhas são comandos que servem para ligar as funções ao objeto.
+        
+            function clicar() {
+                area.innerText = 'Clicou!'
+                area.style.background = 'red'
+            }
+        
+            function entrar() {
+                area.innerText = 'Entrou!'
+            }
+        
+            function sair() {
+                area.innerText = 'Saiu!'
+                area.style.background = 'green'
+            }
+        
+        //Estes 3 métodos servem para o usuário interagir quando passar o mouse e clicar no objeto.
+    </script>
+
+</body>
+</html>

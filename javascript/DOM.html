@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução do DOM</title>
+</head>
+<body>
+    <h1 id="titulo">TÍTULO 01</h1>
+    <p>Eu amo minha mãe</p>
+    <p>Eu amo a minha <strong>namorada</strong></p>
+    <p>Eu amo <strong>mimi</strong></p>
+
+    <script>
+        var paragrafo = document.getElementsByTagName("p")[1] //seleciona todos os paragrafos.
+        document.write(`Isto é o que esta escrito no parágrafo 03 '${paragrafo.innerText} <br>'`) //Para que o JavaScript replique o que está escrito, é necessário criar uma variável.
+
+        paragrafo.style.color = "blue"; //Muda o estilo do parágrafo
+
+        var corpo = document.body;
+        corpo.style.background = "lightpink"; //Muda o estilo do body
+        
+        var p1 = document.getElementsByTagName('p')[2]
+        document.write(p1.innerHTML) //"innerHTML" reproduz o que está escrito com as formatações de estilo.
+
+        var d = document.getElementById("titulo")
+        d.innerText = "ESTOU MODIFICANDO ESTE TÍTULO" //Dessa forma é possivel mudar o que está escrito, reescrendo outra coisa.
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condição com string</title>
+    <style>
+        body{
+            background-color: #006161;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        main{
+            width: 1000px;
+            background-color: aquamarine;
+            margin: auto;
+            margin-top: -35px;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        h1{
+            text-align: center;
+            font-weight: bolder;
+            font-size: 3em;
+            padding-top: 20px;
+        }
+
+        div{
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>DETRAN</h1>
+        Digite qual o seu país natal <input type="text" id="caixa">
+        <input type="button" value="Verificar" onclick="verificar()">
+        
+        <div id="resposta"></div>
+    </main>
+
+    <script>
+        function verificar(){
+            var textocaixa = document.getElementById('caixa').value.toLowerCase() //Usar "value" em textocaixa é necessário para acessar o valor digitado pelo usuário no campo de texto. Sem value, você está referenciando o próprio elemento <input>, e não o conteúdo dele.
+            //"toLowerCase" converte o texto para minúsculas
+            var resposta = document.getElementById('resposta')
+
+            resposta.innerHTML = `Seu país natal se chama ${textocaixa}`
+
+            if (textocaixa === "brasil") {
+                resposta.innerHTML += `<p>Você é brasileiro!</p>`
+            }
+            else {
+                resposta.innerHTML += `<p>Você é estrangeiro!</p>`
+            }
+        }
+    </script>
+    
+</body>
+</html>

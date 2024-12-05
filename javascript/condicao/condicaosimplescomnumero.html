@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condição com números</title>
+<style>    
+    body{
+        background-color: chocolate;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    main{
+        width: 1000px;
+        background-color: coral;
+        margin: auto;
+        margin-top: -35px;
+        border-radius: 10px;
+        padding: 10px;
+        text-align: center;
+    }
+
+    h1{
+        text-align: center;
+        font-weight: bolder;
+        font-size: 3em;
+        padding-top: 20px;
+    }
+
+    div{
+        padding-top: 10px;
+    }
+</style>
+</head>
+<body>
+    <main>
+        <h1>DETRAN</h1>
+        Digite a velocidade do veículo <input type="number" id="caixa"> km/h 
+        <input type="button" value="verificar" onclick="calcular()"> 
+
+        <div id="resposta"></div> 
+    </main>
+
+    <script>
+        function calcular() {
+        var velocidade = document.getElementById('caixa')
+        var resposta = document.getElementById('resposta')
+        var convercao = Number(velocidade.value)
+        
+        resposta.innerHTML = `A velocidade do veículo foi <strong>${convercao}</strong> km/h.`
+
+        if (convercao > 80) {
+            resposta.innerHTML += `<p>Você foi <strong>multado</strong> por excesso de velocidade.</p>`
+        }
+        else{
+            resposta.innerHTML += `<p>Você está <strong>não</strong> excedeu o limite de velocidade.</p>`
+        }
+
+        }
+    </script>
+</body>
+</html>

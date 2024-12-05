@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ex02.css">
+    <title>Exercício 02 - Ano de nascimento</title>
+</head>
+<body>
+    <header>
+        <h1>VERIFICADOR DE IDADE</h1>
+    </header>
+
+    <section>
+        Ano de nascimento <input type="number" name="caixa" id="caixa" min="0">
+
+        <p>Sexo:
+            <input type="radio" name="sexradio" id="masculino" checked>
+            <label for="masculino">Masculino</label>
+            <input type="radio" name="sexradio" id="feminino">
+            <label for="feminino">Feminino</label>
+        </p>
+
+        <input type="button" value="Verificar" id="verificar" onclick="verificar()">
+
+        <div id="resultado">
+            Preencha os dados acima para ver o resultado!
+        </div>
+
+        <img id="foto">
+    </section>
+
+    <footer>&copy; <em>CursoemVideo</em> </footer>
+
+    <script src="ex02.js"></script>
+</body>
+</html>

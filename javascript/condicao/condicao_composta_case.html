@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condição composta com Case</title>
+    <style>
+        body{
+            background-color: darkgreen;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        main{
+            width: 1000px;
+            background-color: floralwhite;
+            margin: auto;
+            margin-top: -35px;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        h1{
+            text-align: center;
+            font-weight: bolder;
+            font-size: 3em;
+            padding-top: 20px;
+        }
+
+        h2{
+            margin-top: -10px;
+            margin-bottom: 30px;
+        }
+
+        div{
+            padding-top: 10px;
+            background-color: chocolate;
+            width: 800px;
+            height: 35px;
+            margin: 15px auto 10px auto;
+            color: white;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>DIA DE FESTA</h1>
+        <h2>Digite o dia da semana e diremos se é dia de festa.</h2>
+
+        Digite qual dia da semana <input type="text" id="caixa">
+        <input type="button" value="Verificar" onclick="verificar()">
+        <div id="resposta"></div>
+
+        <script>
+           function verificar(){
+               
+               var dia = document.getElementById('caixa').value.toLowerCase()
+               var resposta = document.getElementById('resposta')
+
+               switch (dia) {
+                   case "segunda":
+                       resposta.innerHTML = 'Pior dia para festas!'
+                       break
+                   case "terça":
+                       resposta.innerHTML = 'Pior dia para festa!'
+                       break
+                   case "quarta":
+                       resposta.innerHTML = 'Não é um dos piores dias, mas, melhor não.'
+                       break
+                   case "quinta":
+                       resposta.innerHTML = 'Pode ser uma boa escolha para uma festa, mas não exagere.'
+                       break
+                   case "sexta":
+                       resposta.innerHTML = 'Ótimo dia para fazer uma boa festa!'
+                       break
+                   case "sábado":
+                       resposta.innerHTML = 'Dia perfeito para uma festa, não existe dia melhor do que este!'
+                       break
+                   case "domingo":
+                       resposta.innerHTML = 'Não é um dia ruim, mas também não é uma boa escolha, opte por outro dia ou busque algo mais leve.'
+                       break
+                   default:
+                       resposta.innerHTML = '<em>[ERRO]</em> Verifique se você digitou o dia corretamente e tente outra vez.'
+                       break
+               }
+            }
+        </script>
+    </main>
+</body>
+</html>
