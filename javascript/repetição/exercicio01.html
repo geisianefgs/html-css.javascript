@@ -69,9 +69,15 @@
             f = Number(fim.value)
             p = Number(passo.value)
 
-            for(c = i ;c <= f ; c += p){
-                resposta.innerHTML += `${c} \u{1F603}`
-            }
+            if (i < f){
+                for(c = i ;c <= f ; c += p){
+                    resposta.innerHTML += `${c}..`
+                }
+            } else{
+                for (c = i; c>= f; c-= p){
+                    resposta.innerHTML += `${c}..`
+                }
+            } 
         }
         }
     </script>
