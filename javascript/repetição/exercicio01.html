@@ -46,39 +46,38 @@
                 </p>
                 <p>Passo:
                     <label for="passo"></label>
-                    <input type="number" name="pa" id="passo" min="1">
+                    <input type="number" name="passo" id="passo" min="1">
                 </p>
 
-                <input type="submit" value="Contar" id="contar" onclick="contar()">
+                <input type="button" value="Contar" id="contar" onclick="contar()">
 
             <div id="resposta">Preparando contagem</div>
         </section>
     </main>
 
     <script>
-        function contar(){
+        function contar (){
             inicio = document.getElementById('n1')
             fim = document.getElementById('n2')
             passo = document.getElementById('passo')
+            resposta = document.getElementById('resposta')
 
-        if (inicio.value.length == 0 || fim.value.length == 0 || passo.value.length == 0) {
-            alert('ERRO, faltam dados.')
-        } else{
-            resposta.innerHTML = "Contando " 
-            i = Number(inicio.value)
-            f = Number(fim.value)
-            p = Number(passo.value)
+            
 
-            if (i < f){
-                for(c = i ;c <= f ; c += p){
-                    resposta.innerHTML += `${c}..`
+            if (inicio.value.length == 0 || fim.value.length == 0 || passo.value.length == 0){
+                resposta.innerHTML = 'Impossivel contar!'
+            } else {
+                inicio = Number(inicio.value)
+                fim = Number(inicio.value)
+                passo = Number(inicio.value)
+
+                if (inicio < fim){
+                    for (c = inicio; c <= fim; c += passo){
+                        resposta.innerHTML = `${c}..`}
+                } else {
+                    resposta.innerHTML = 'OK'
                 }
-            } else{
-                for (c = i; c>= f; c-= p){
-                    resposta.innerHTML += `${c}..`
-                }
-            } 
-        }
+            }
         }
     </script>
 </body>
