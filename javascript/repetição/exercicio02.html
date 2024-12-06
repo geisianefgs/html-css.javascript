@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(103, 103, 252);
+        }
+
+        h1{
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            font-size: 3em
+        }
+
+        main{
+            background-color: white;
+            padding: 20px;
+            margin: auto;
+            width: 500px;
+            height: 300px;
+            font-family: Arial, Helvetica, sans-serif
+        }
+
+        select{
+            margin-top: 20px;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>TABUADA</h1>
+    <main>
+        <label for="numero"></label>
+        Número <input type="number" name="numero" id="numero">
+
+        <input type="button" value="Gerar tabuada" onclick="gerar()">
+
+        <br>
+
+        <select name="tabuada" id="tabuada">
+            <option value="">Digite um valor acima</option>
+        </select>
+    </main>
+
+    <script>
+        function gerar(){
+            numero = document.getElementById('numero')
+            tabuada = document.getElementById('tabuada')
+            
+            if(numero.value.length == 0){
+                alert('[ERRO] Tabuada não pode ser gerada, preencha todos os campos.')
+            } else{
+                numero = Number(numero.value)
+
+                if(){
+
+                } else{
+
+                }
+            }
+        }
+    </script>
+</body>
+</html>
