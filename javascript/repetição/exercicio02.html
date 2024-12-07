@@ -25,6 +25,16 @@
             font-family: Arial, Helvetica, sans-serif
         }
 
+        strong{
+            color: red;
+            font-weight: bolder;
+            font-size: 18px;
+        }
+
+        input#botao{
+            margin-top: 15px;
+        }
+
         select{
             margin-top: 20px;
         }
@@ -35,14 +45,14 @@
     <h1>TABUADA</h1>
     <main>
         <label for="numero"></label>
-        Número <input type="number" name="numero" id="numero">
-
-        <input type="button" value="Gerar tabuada" onclick="gerar()">
+        Número <input type="number" name="numero" id="numero"> <strong>*</strong>
+        <br>
+        <input id="botao" type="button" value="Gerar tabuada" onclick="gerar()">
 
         <br>
 
         <select name="tabuada" id="tabuada" size="10">
-            <option value="">Digite um valor acima</option>
+            <option>Digite um número acima</option>
         </select>
     </main>
 
@@ -51,13 +61,20 @@
             numero = document.getElementById('numero')
             tabuada = document.getElementById('tabuada')
             
-            if(numero.value.length == 0){
-                alert('[ERRO] Tabuada não pode ser gerada, preencha todos os campos.')
-            } else{
+            if (numero.value.length == ''){
+                alert('Por favor preencha todos os campos.')
+            } else { 
                 numero = Number(numero.value)
-
+                contador = 1
+                tabuada.innerHTML = ''
+                while(contador <= 10){
+                        item = document.createElement('option') /*Cria opção dentro do SELECT*/
+                        item.text = `${numero} X ${contador} = ${numero*contador}` /*Define o texto da opção*/
+                        tabuada.appendChild(item) /*Adiciona o item à lista*/
+                        contador++
+                    }   
+                }
             }
-        }
     </script>
 </body>
 </html>
