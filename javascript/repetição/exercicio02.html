@@ -65,6 +65,7 @@
                 alert('Por favor preencha todos os campos.')
             } else { 
                 numero = Number(numero.value)
+                
                 contador = 1
                 tabuada.innerHTML = ''
                 while(contador <= 10){
@@ -74,6 +75,12 @@
                         contador++
                     }   
                 }
+
+                /* A função WHILE pode ser substituida pela função FOR 
+                    for (contador = 1; contador <= 10; contador++)
+                        item = document.createElement('option')
+                        item.text = `${numero} X ${contador} = ${numero*contador}`
+                        tabuada.appendChild(item)*/
             }
     </script>
 </body>
