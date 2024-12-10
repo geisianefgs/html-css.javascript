@@ -77,15 +77,66 @@
         
 //exercício 06 c): Use um for para exibir os números de 1 a 5. Depois, faça o mesmo usando um while.
         //Usando 'for':
-        for(numero = 0; numero <= 10; numero++){  
+        for(numero = 1; numero <= 5; numero++){  
                 console.log(`Número ${numero}`)
         }
 
         console.log('Contando novamente...')
 
         //Usando 'while':
-        numero = 0
-        while(numero <= 10){
+        numero = 1
+        while(numero <= 5){
                 console.log(`Número ${numero}`)
                 numero++
         }
+
+//exercício 07 a): Crie uma função chamada saudação que receba um nome como parâmetro e exiba "Olá, [nome]!".
+
+function saudacao(nome){
+        nome = 'Geisiane'
+        console.log(`Olá ${nome}`)
+}
+
+saudacao(nome)
+        
+//exercício 07 b): Escreva uma função que receba um número como parâmetro e retorne o dobro desse número.
+
+
+        
+//exercício 07 c): Transforme as duas funções anteriores em arrow functions.
+        
+//exercício 08 a): Crie um array com três frutas de sua escolha. Exiba a primeira fruta.
+        
+//exercício 08 b): Adicione uma fruta ao final do array e outra ao início. Exiba o array atualizado.
+        
+//exercício 08 c): Remova o último elemento do array e exiba o array final.
+        
+//exercício 09 a): Crie um objeto chamado pessoa com as propriedades nome, idade e cidade. Exiba a propriedade cidade.
+        
+//exercício 09 b): Adicione uma propriedade profissao ao objeto pessoa e defina um valor para ela. Exiba o objeto completo.
+        
+//exercício 09 c): Adicione um método saudacao no objeto pessoa que exiba uma saudação com o nome da pessoa.
+        
+//exercício 10 a): Crie um botão no HTML com o texto "Clique aqui". Em JavaScript, selecione esse botão e exiba uma mensagem de alerta ao clicar nele.
+        
+//exercício 10 b): Crie um parágrafo no HTML e, ao clicar em um botão, altere o texto do parágrafo para "Texto atualizado pelo JavaScript!".
+        
+//exercício 10 c): No HTML, adicione um input de texto e um botão. Quando o botão for clicado, exiba o valor do input em um parágrafo.
+        
+//exercício 11 a): No HTML, adicione um botão com o texto "Mostrar Alerta". Em JavaScript, adicione um evento de clique que exiba um alerta com a mensagem "Botão clicado!".
+
+//exercício 11 b): Crie uma função em JavaScript que é executada quando uma tecla é pressionada, exibindo a tecla pressionada no console.
+        
+//exercício 11 c): Adicione um evento mouseover a um elemento no HTML que muda a cor de fundo desse elemento ao passar o mouse sobre ele.
+
+//exercício 12 a): Crie uma Promise que resolve com o valor "Processo concluído!" após 2 segundos. Use then para exibir essa mensagem no console.
+
+//exercício 12 b): Escreva uma função assíncrona que simula o carregamento de dados de uma API com await. Exiba "Dados carregados!" após 3 segundos.
+
+//exercício 12 c): Refaça o exercício anterior, mas usando setTimeout em vez de await.
+       
+//exercício 13 a): Crie um objeto pessoa em JavaScript com as propriedades nome, idade e cidade. Converta o objeto em uma string JSON usando JSON.stringify() e exiba no console.
+
+//exercício 13 b): Pegue uma string JSON como {"nome": "Geisiane", "idade": 21} e converta de volta para um objeto. Exiba o valor da propriedade nome.
+
+//exercício 13 c): Crie um array de objetos JSON com dados de três pessoas e exiba o nome da primeira pessoa no console após converter para objeto.
