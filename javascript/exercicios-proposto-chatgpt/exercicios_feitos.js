@@ -93,29 +93,80 @@
 //exercício 07 a): Crie uma função chamada saudação que receba um nome como parâmetro e exiba "Olá, [nome]!".
 
 function saudacao(nome){
-        nome = 'Geisiane'
         console.log(`Olá ${nome}`)
 }
 
-saudacao(nome)
+saudacao('Geisiane')
         
 //exercício 07 b): Escreva uma função que receba um número como parâmetro e retorne o dobro desse número.
 
+function dobro(numero){
+        return numero*2
+}
 
-        
-//exercício 07 c): Transforme as duas funções anteriores em arrow functions.
-        
+console.log(`${dobro(2)}`)
+                 
 //exercício 08 a): Crie um array com três frutas de sua escolha. Exiba a primeira fruta.
+
+frutas = ['banana', 'uva', 'melancia']
+
+console.log(frutas[0])
         
 //exercício 08 b): Adicione uma fruta ao final do array e outra ao início. Exiba o array atualizado.
+
+frutas = [' banana', ' uva', ' melancia']
+
+frutas.push(' goiaba')
+frutas.unshift('maçã')
+
+console.log(`${frutas}`)
+
         
 //exercício 08 c): Remova o último elemento do array e exiba o array final.
+
+numeros = [1, 2, 3]
+
+numeros.pop()
+
+console.log(numeros)
         
 //exercício 09 a): Crie um objeto chamado pessoa com as propriedades nome, idade e cidade. Exiba a propriedade cidade.
+
+pessoa = {
+        nome: 'Geisiane',
+        idade: 22,
+        cidade: 'Feira de Santana'
+}
+
+console.log(pessoa.cidade)
         
 //exercício 09 b): Adicione uma propriedade profissao ao objeto pessoa e defina um valor para ela. Exiba o objeto completo.
+
+pessoa = {
+        nome: 'Geisiane',
+        idade: 22,
+        cidade: 'Feira de Santana'
+}
+
+pessoa.profissao = 'Programodora'
+
+console.log(pessoa)
         
 //exercício 09 c): Adicione um método saudacao no objeto pessoa que exiba uma saudação com o nome da pessoa.
+
+pessoa = {
+        nome: 'Geisi',
+        idade: 22,
+        cidade: 'Feira de Santana'
+}
+
+pessoa.profissao = 'Programodora'
+
+function saudar(pessoa){
+        console.log(`Olá ${pessoa.nome}`)
+}
+
+saudar(pessoa)
         
 //exercício 10 a): Crie um botão no HTML com o texto "Clique aqui". Em JavaScript, selecione esse botão e exiba uma mensagem de alerta ao clicar nele.
         
