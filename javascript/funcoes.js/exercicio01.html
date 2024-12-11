@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 01 de repetição</title>
+    <style>
+        body{
+            background-color: rgb(0, 156, 156);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1{
+            text-align: center;
+            color: white;
+            text-shadow: 2px 2px 2px black;
+            font-weight: bolder;
+        }
+
+        main{
+            margin: auto;
+            padding: 30px;
+            width: 500px;
+            height: 250px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.616);
+        }
+
+        select{
+            margin-top: 15px;
+        }
+
+        #contar{
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>ANALISADOR DE NÚMEROS</h1>
+    <main>
+        <section>
+                <label for="numero"></label> 
+                Número (entre 1 e 100): <input type="number" name="numero" id="numero">
+
+                <input type="submit" value="Adicionar" onclick="selecionar()">
+        </section>
+
+        <section>
+            <select name="selecao" id="selecao" size="10">
+                <option>Escolha um número de 1 à 100</option>
+            </select>
+        </section>
+    </main>
+
+    <script>
+        function selecionar(){
+            numero = document.getElementById('numero')
+
+            if(numero.value.length == ''){
+                alert('[ERRO] Preencha todos os campos.')
+            } else if (||numero.value.length == numero.value.length){
+                alert('[ERRO] Não repita valores.')
+            } else {
+                numero = Number(numero.value)
+
+                item = document.createElement('option')
+                
+            }
+        }
+    </script>
+</body>
+</html>
