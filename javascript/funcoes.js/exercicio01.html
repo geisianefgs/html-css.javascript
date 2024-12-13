@@ -96,7 +96,6 @@
             
             let maior = numeros[0]
             let menor = numeros[0]
-
             for(let i = 1; i < numeros.length; i++){
                 if (numeros[i] > maior){
                     maior = numeros[i]
@@ -105,13 +104,17 @@
                     menor = numeros[i]
                 }
             }
-
             resposta.innerHTML += `O maior número é o <strong>${maior}</strong>. <br>`
             resposta.innerHTML += `O menor número é o <strong>${menor}</strong>. <br>`
 
-            let soma = 
-            
-            resposta.innerHTML += `A soma de todos os valores foi ${soma}. <br>`
+            let soma = 0
+            for (numero of numeros){ //versão simplificada que mostra apenas os valores
+                soma += numero //É a mesma coisa que "soma = soma + numero".
+            }
+            resposta.innerHTML += `A soma de todos os valores foi <strong>${soma}</strong>. <br>`
+
+            let media = soma / numeros.length
+                resposta.innerHTML += `A média dos valores foi <strong>${media}</strong>.`
         }
     </script>
 </body>
