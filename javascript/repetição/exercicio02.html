@@ -58,18 +58,18 @@
 
     <script>
         function gerar(){
-            numero = document.getElementById('numero')
-            tabuada = document.getElementById('tabuada')
+            let numero = document.getElementById('numero')
+            let tabuada = document.getElementById('tabuada')
             
-            if (numero.value.length == ''){
+            if (numero.value == 0){
                 alert('Por favor preencha todos os campos.')
             } else { 
                 numero = Number(numero.value)
                 
-                contador = 1
+                let contador = 1
                 tabuada.innerHTML = ''
                 while(contador <= 10){
-                        item = document.createElement('option') /*Cria opção dentro do SELECT*/
+                        let item = document.createElement('option') /*Cria opção dentro do SELECT*/
                         item.text = `${numero} X ${contador} = ${numero*contador}` /*Define o texto da opção*/
                         tabuada.appendChild(item) /*Adiciona o item à lista*/
                         contador++

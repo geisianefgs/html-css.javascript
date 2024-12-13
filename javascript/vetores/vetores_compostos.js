@@ -7,3 +7,4 @@ console.log(numero.indexOf(9)) //Mostra em que posição o 0 está
 console.log(numero.sort()) //Mostra em ordem crescente os números
 console.log(numero.unshift(102)) //Adiciona um elemento no inicio
 console.log(numero.pop()) //Remove o último elemento
+console.log(numero.includes()) //Verifica se ha numeros repetidos
