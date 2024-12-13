@@ -20,11 +20,13 @@
         main{
             margin: auto;
             padding: 30px;
-            width: 500px;
+            width: 90%;       /*}   Torna o ambiente responsivo em telas menores*/
+            max-width: 500px; /*}                                               */
             height: auto; /*Faz o main crescer conforme os códigos forem aparecendo abaixo*/
             background-color: white;
             border-radius: 10px;
             box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.616);
+            box-sizing: border-box;
         }
 
         select, #finalizar {
@@ -42,10 +44,10 @@
     <h1>ANALISADOR DE NÚMEROS</h1>
     <main>
         <section>
-                <label for="numero"></label> 
-                Número (entre 1 e 100): <input type="number" name="numero" id="numero">
+                <label for="numero">Número (entre 1 e 100):</label> 
+                <input type="number" name="numero" id="numero">
 
-                <input type="submit" value="Adicionar" onclick="adicionar()">
+                <input type="button" value="Adicionar" onclick="adicionar()">
         </section>
 
         <section>
@@ -62,31 +64,44 @@
         let numeros = []  //Armazena os próximos números adicionados pelo usuário sem que apague o anterior.
 
         function adicionar(){
-            let numero = document.getElementById('numero')
+            let numerocampo = (document.getElementById('numero')) //É o campo que o usuario adiciona valores
+            let numero = Number(numerocampo.value) 
             let selecao = document.getElementById('selecao')
             let resposta = document.getElementById('resposta')
 
-            numero = Number(numero.value) //Vai converter as strings para números antes de começar o código.
 
-            if(numero.value == 0){
-                alert('[ERRO] Preencha todos os campos.')
-                return                                          //
-            } else if (numero.value > 100){
-                alert('[ERRO] Escolha um valor entre 1 e 100.')
-                return                                          //Fará com que o codigo pare e o número inválido não seja adicionado.
+            if (numero < 1 || numero > 100){
+                alert('[ERRO] Verifique e escolha um valor entre 1 e 100 ou preencha todos os campos.')
+                return //Fará com que o codigo pare e o número inválido não seja adicionado.
             } else if (numeros.includes(numero)){
                 alert('[ERRO] Não repita números.')
-                return                                          //
+                return //Fará com que o codigo pare e o número inválido não seja adicionado.
             }
+
                 numeros.push(numero) //faz com que todo número adicionado pelo usuário seja rastreado e possa fazer calculos.
 
                 item = document.createElement('option')           //
                 item.text = `O número ${numero} foi adicionado`   // Adiciona options ao select
                 selecao.appendChild(item)                         //
+
+            numerocampo.value = '' // limpa o campo que usuário adiciona valores apos o valor ser enviado
+            
+            setTimeout(function(){ //força o navegador a usar o foco ja que sem ele nao funciona.
+            numerocampo.focus()    // foca no campo de entrada apos a limpeza automatica.
+            }, 10)
+
+            resposta.innerHTML = ''  //Apaga todos os resultados quando adicionado um novo número pelo usuário.
             
         }
 
         function finalizar(){
+            let selecao = document.getElementById('selecao')
+            let resposta = document.getElementById('resposta')
+
+            if (numeros.length === 0) {
+            alert('[ERRO] Adicione pelo menos um número antes de finalizar.')
+            return
+            }
             
             if (numeros.length == 1){
                  resposta.innerHTML = `Foi cadastrado <strong>${numeros.length}</strong> número. <br>`
@@ -116,6 +131,8 @@
             let media = soma / numeros.length
                 resposta.innerHTML += `A média dos valores foi <strong>${media}</strong>.`
         }
+
+        
     </script>
 </body>
 </html>
