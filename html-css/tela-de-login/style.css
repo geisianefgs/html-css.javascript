@@ -35,12 +35,37 @@ section{
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 400px;
+    height: 500px;
+}
+
+#login{
+    padding: 0px 40px;
 }
 
 h1{
     text-align: center;
 }
+
+#bloco1{
+    margin-top: -15px;
+}
+
+form > input[type=submit]{
+    display: block;
+    width: 100%;
+    margin-top: 13px;
+    font-size: 18px;
+}
+
+form > input[type=button]{
+    display: block;
+    width: 100%;
+    font-size: 18px;
+    margin-top: -5px;
+}
+
+
+
 
 /*celular e tablet*/
 @media screen and (min-width: 300px) and (max-width: 768px){
@@ -55,10 +80,6 @@ h1{
     
     #imagem{
         height: 400px;
-    }
-    
-    h1{
-        text-align: center;
     }
 }
 
@@ -109,13 +130,13 @@ h1{
     
     #login{
         float: left;
-        margin-right: 160px;
-        margin-top: 90px;
+        margin-left: 130px;
+        margin-top: 40px;
         width: 150px;
     }
     
     h1{
-        font-size: 2em;
+        font-size: 2.5em;
     }
     
     }
