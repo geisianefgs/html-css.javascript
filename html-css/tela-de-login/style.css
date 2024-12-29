@@ -38,10 +38,6 @@ section{
     height: 500px;
 }
 
-#login{
-    padding: 0px 40px;
-}
-
 h1{
     text-align: center;
 }
@@ -81,6 +77,10 @@ form > input[type=button]{
     #imagem{
         height: 400px;
     }
+
+    #login{
+        padding: 0px 40px;
+    }
 }
 
 /*tablet e tela menores*/
@@ -113,7 +113,7 @@ form > input[type=button]{
 @media screen and (min-width: 992px){
 
     body{
-        background: linear-gradient(to top , blueviolet, #5cff5cab) no-repeat;
+        background: linear-gradient(to top , #5cff5cab, blueviolet) no-repeat;
     }
     
     section{
@@ -123,7 +123,7 @@ form > input[type=button]{
     
     #imagem{
         height: 400px;
-        width: 300px;
+        width: 350px;
     
         float: right;
     }
@@ -132,7 +132,6 @@ form > input[type=button]{
         float: left;
         margin-left: 130px;
         margin-top: 40px;
-        width: 150px;
     }
     
     h1{
