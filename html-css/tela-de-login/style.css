@@ -107,11 +107,15 @@ form > input[type=button]{
     h1{
         font-size: 30px;
     }
+
+    #bloco1, #bloco2{
+        height: 45px;
+    }
     
     form > div > input[type=text]{
         padding: 5px;
-        width: calc(100%, -38px);
-        transform: translate(-3px, -4px);
+        width: calc(100%, -8px);
+        transform: translate(35px, -32px);
         height: 25px;
         border-radius: 5px;
     }    
