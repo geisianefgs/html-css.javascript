@@ -113,9 +113,9 @@ form > input[type=button]{
     }
     
     form > div > input[type=text]{
-        padding: 5px;
-        width: calc(100%, -8px);
-        transform: translate(35px, -32px);
+        padding: 4px;
+        width: calc(100% - 55px);
+        transform: translate(40px, -31px);
         height: 25px;
         border-radius: 5px;
     }    
