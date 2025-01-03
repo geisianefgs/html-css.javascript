@@ -81,6 +81,14 @@ form > input[type=button]{
     color: rgb(61, 61, 61);
 }
 
+form > div > input[type=text]{
+    padding: 5px;
+    width: calc(100% -60px);
+    transform: translate(-3px, -4px);
+    height: 25px;
+    border-radius: 5px;
+}
+
 
 
 
@@ -110,15 +118,15 @@ form > input[type=button]{
 
     #bloco1, #bloco2{
         height: 45px;
-    }
-    
+    }   
+
     form > div > input[type=text]{
-        padding: 4px;
-        width: calc(100% - 55px);
-        transform: translate(40px, -31px);
+        padding: 5px;
+        width: calc(100% - 60px);
+        transform: translate(-3px, -3px);
         height: 25px;
         border-radius: 5px;
-    }    
+    }
 }
 
 /*tablet maiores e tela menores*/
@@ -156,6 +164,7 @@ form > input[type=button]{
 
     form > div > input[type=text]{
         padding: 5px;
+        width: calc(100% -60px);
         transform: translate(-3px, -4px);
         height: 25px;
         border-radius: 5px;
@@ -194,10 +203,11 @@ form > input[type=button]{
     #bloco2{
         margin-bottom: 20px;
     }
-    
+
     form > div > input[type=text]{
         padding: 5px;
-        transform: translate(-3px, -4px);
+        width: calc(100% - 70px);
+        transform: translate(4px, -3px);
         height: 25px;
         border-radius: 5px;
     }
