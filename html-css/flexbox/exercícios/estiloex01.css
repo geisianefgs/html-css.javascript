@@ -1,0 +1,86 @@
+@charset "UTF-8";
+    
+header{
+    background-color: grey;
+    margin: -10px -8px;
+    padding: 10px 10px 20px 10px;
+    width: 100%;
+    height: 130px;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between; /*Coloca os dois containers alinhado lado a lado*/
+}
+
+#TituloHeader{
+    font-family: cursive;
+    font-size: 16px;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    padding-left: 20px;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: center;
+}
+
+#ContainerMenu{
+    font-family: cursive;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    padding-right: 20px;
+    padding-left: 20px;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-content: center;
+}
+
+header > #ContainerMenu > div{
+    background-color: #707070;
+    border: 2px solid black;
+    width: 62px;
+    height: 25px;
+    border-radius: 5px;
+    padding: 2px 5px;
+    margin-left: 5px;
+}
+
+main{
+    min-width: 200px;
+    max-width: 80vw;
+    margin: auto;
+    background-color: darkolivegreen;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-shadow: 4px 5px 2px #000000b7;
+}
+
+main > h1{
+    font-family: cursive;
+    text-align: center;
+    color: aliceblue;
+    text-shadow: 1px 1px 1px black;
+}
+
+main > p{
+    font-family: cursive;
+    text-align: justify;
+    color: aliceblue;
+}
+
+@media screen and (min-width: 300px) and (max-width: 570px){
+    
+header{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+}

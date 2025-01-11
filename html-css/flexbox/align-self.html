@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>align-self</title>  
+<style>
+    .container {
+      display: flex;
+      flex-flow: row wrap;
+
+      border: 2px solid black;
+      height: 200px;
+    }
+    .item {
+      align-self: center; 
+
+      width: 100px;
+      height: 100px;
+      margin: 5px;
+      background-color: lightcoral;
+    }
+  </style>
+</head>
+<body>
+    <h1>align-self</h1>
+    <p>Alinha um item específico no eixo cruzado do contêiner.</p>
+    
+  <div class="container">
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+  </div>
+</body>
+</html>

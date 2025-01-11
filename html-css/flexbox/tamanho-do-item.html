@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>align-content
+</title>
+  <style>
+    .container {
+      display: flex;
+      flex-flow: row nowrap;
+      align-content: center;
+      justify-content: center;
+
+      border: 2px solid black;
+      height: 200px;
+    }
+
+    .item {
+      display: grid;        /*Alinha o texto ao centro da caixa*/
+      place-items: center;  /*Alinha o texto ao centro da caixa*/
+
+      background-color: lightgreen;
+      margin: 5px;
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 18px;
+      padding: 10px;
+
+      flex-basis: 200px; /*Tamanho do item de acordo com a direção ROW e COLUMN*/
+      height: 70px;
+    }
+
+    #item1{
+      flex-grow: 0; /*Aumenta o item conforme o tamanho da tela*/
+      flex-shrink: 0; /*Diminui o item conforme o tamanho da tela*/
+    }
+
+    #item2{
+      flex-shrink: 0; 
+      flex-grow: 2; /*Aumenta o dobro do valor de 1 e assim por diante. Mas se não tiver o valor de 1 no FLEX-GROW, ele irar aumentar o dobro do FLEX-BASES.*/ 
+    }
+
+    #item3{
+      flex-shrink: 2;
+      flex-grow: 0;
+    }
+  </style>
+
+</head>
+<body>
+  <div class="container">
+    <div class="item" id="item1">NÃO AUMENTA E NEM DIMINUI</div>
+    <div class="item" id="item2">AUMENTA O DOBRO E NÃO DIMINUI</div>
+    <div class="item" id="item3">NÃO AUMENTA E DIMINUI O DOBRO</div>
+  </div>
+
+
+<!--
+Para simplificar a propriedade FLEX temos: (flex: grow, shrink e basis).
+flex: initial; = Configuração padrão flex: 0 1 auto.
+flex: none; = Não modifica o tamanho flex: 0 0 auto.
+flex: auto; = Pode aumentar ou diminuir o item filho flex: 1 1 auto.
+-->
+
+</body>
+</html>
