@@ -1,5 +1,9 @@
 @charset "UTF-8";
     
+*{
+    transition: width 0.5s, heigth 0.5s;
+}
+
 header{
     background-color: grey;
     margin: -10px -8px;
@@ -19,8 +23,6 @@ header{
     text-shadow: 1px 1px 1px black;
     padding-left: 20px;
 
-    display: flex;
-    flex-flow: row wrap;
     justify-content: flex-start;
     align-content: center;
 }
@@ -74,13 +76,31 @@ main > p{
     color: aliceblue;
 }
 
-@media screen and (min-width: 300px) and (max-width: 570px){
+
+
+@media screen and (min-width: 300px) and (max-width: 560px){
     
 header{
+    height: 50vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#TituloHeader{
+    font-size: 1em;
+}
+
+#ContainerMenu{
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
-    align-content: center;
+}
+
+header > #ContainerMenu > div{
+    margin-bottom: 5px;
 }
 
 }
